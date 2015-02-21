@@ -12,7 +12,16 @@ class CreateRegUpdateTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('reg_update', function($table)
+		{
+		$table->increments('id');
+		$table->integer('A1')->unsigned();
+		$table->integer('B1')->unsigned();
+		$table->integer('B2')->unsigned();
+		$table->integer('B3')->unsigned();
+		$table->integer('B4')->unsigned();
+		$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +31,7 @@ class CreateRegUpdateTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('reg_update');
 	}
 
 }

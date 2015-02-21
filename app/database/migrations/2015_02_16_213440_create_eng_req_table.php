@@ -12,7 +12,12 @@ class CreateEngReqTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('eng_req', function($table)
+		{
+		$table->increments('id');
+		$table->integer('reg')->unsigned();
+		$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +27,7 @@ class CreateEngReqTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('eng_req');
 	}
 
 }

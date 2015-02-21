@@ -12,7 +12,18 @@ class CreateSustSeatPlanTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('sust_seat_plan', function($table)
+		{
+		$table->increments('id');
+		$table->string('loc', 100);
+		$table->string('block', 100);
+		$table->string('room', 100);
+		$table->integer('seat')->unsigned();
+		$table->integer('start')->unsigned();
+		$table->integer('end')->unsigned();
+		$table->string('unit', 5);
+		$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +33,7 @@ class CreateSustSeatPlanTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('sust_seat_plan');
 	}
 
 }

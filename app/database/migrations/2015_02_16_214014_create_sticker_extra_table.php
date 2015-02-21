@@ -12,7 +12,13 @@ class CreateStickerExtraTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('sticker_extra', function($table)
+		{
+		$table->increments('id');
+		$table->string('admission_roll', 50);
+		$table->string('name', 200);
+		$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +28,7 @@ class CreateStickerExtraTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('sticker_extra');
 	}
 
 }

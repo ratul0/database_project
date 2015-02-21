@@ -12,7 +12,16 @@ class CreateEligibleTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('eligible', function($table)
+		{
+		$table->increments('id');
+		$table->integer('hsc_roll')->unsigned();
+		$table->string('hsc_board', 20);
+		$table->integer('hsc_pass_year')->unsigned();
+		$table->string('university', 10);
+		$table->string('unitkeyword', 5);
+		$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +31,7 @@ class CreateEligibleTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('eligible');
 	}
 
 }

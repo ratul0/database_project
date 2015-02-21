@@ -12,7 +12,13 @@ class CreateSustResultMsgTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('sust_result_msg', function($table)
+		{
+		$table->increments('id');
+		$table->integer('exam_roll')->unsigned();
+		$table->string('result', 200);
+		$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +28,7 @@ class CreateSustResultMsgTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('sust_result_msg');
 	}
 
 }

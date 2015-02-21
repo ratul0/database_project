@@ -12,7 +12,14 @@ class CreatePagesTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('pages', function($table)
+		{
+		$table->increments('id');
+		$table->string('key', 255);
+		$table->string('title', 255);
+		$table->text('content');
+		$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +29,7 @@ class CreatePagesTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('pages');
 	}
 
 }
