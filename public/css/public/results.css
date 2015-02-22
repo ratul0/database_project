@@ -1,0 +1,74 @@
+.invalid
+{
+border: 1px solid #ff0000;
+background-color: ffdede;
+}
+#info
+{
+font-size: 11px;
+margin-bottom: 5px;
+}
+#roll
+{
+text-align: center;
+font-size: 25px;
+border: 1px solid #DDDDDD;
+-moz-border-radius: 1em;
+}
+.err
+{
+color: #ff0000;
+}
+
+#result
+{
+display: none;
+border: 1px solid #DDDDDD;
+-moz-border-radius: 1em;
+background-color: #fAfAfA;
+padding: 20px;
+margin: 20px;
+font-size: 18px;
+}
+
+#result h1
+{
+color: #666666;
+border-bottom: 1px dashed #CCCCCC;
+padding-bottom: 20px;
+margin-bottom: 20px;
+text-align: center;
+}
+
+#result .error
+{
+color: #ff0000;
+font-size: 15px;
+text-align: center;
+}
+
+#result ul
+{
+margin: 0px;
+padding: 0px;
+margin-left: 50px;
+font-size: 12px;
+}
+
+
+#ajax
+{
+height: 20px;
+margin: 10px;
+}
+#ajax img
+{
+display: none;
+}
+
+input, textarea, select, option {
+    padding: 2px 5px;
+    border: 1px solid #000000;
+    font: 14px Verdana,Arial,Helvetica,sans-serif;
+    color: #000000;
+}
