@@ -6,16 +6,15 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
             [
-                'name' => 'Administrator',
                 'username' => 'admin',
                 'email' => 'admin@sust.edu',
-                'password' => Hash::make('1'),
+                'password' => Hash::make('a'),
                 'created_at' => date('Y-m-d H-i-s'),
                 'updated_at' => date('Y-m-d H-i-s')
             ]
 
         ];
 
-        DB::table('admin')->insert($users);
+        DB::table('users')->insert($users);
     }
 }
