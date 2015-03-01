@@ -1,9 +1,9 @@
 <!-- Footer ================================================================== -->
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Version</b> 2.0
+        Copyright &copy; {{date('Y')}} | Site Version <strong>2.0</strong>
     </div>
-    <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+    Developed By <strong><a href="http://www.facebook.com/bondhu">Burhan Uddin </a>[Version 1.0]</strong>,<strong><a href="http://www.facebook.com/bondhu">Yousuf Khan Ratul</a>,<a href="http://www.facebook.com/bondhu">Abu Shahriar Ratul</a>[Version 2.0]</strong>
 </footer>
 <!-- Placed at the end of the document so the pages load faster ============================================= -->
 
