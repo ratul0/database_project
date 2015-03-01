@@ -8,7 +8,7 @@ class UsersTableSeeder extends Seeder
             [
                 'username' => 'admin',
                 'email' => 'admin@sust.edu',
-                'password' => Hash::make('a'),
+                'password' => Hash::make('sust'),
                 'created_at' => date('Y-m-d H-i-s'),
                 'updated_at' => date('Y-m-d H-i-s')
             ]
