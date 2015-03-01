@@ -23,7 +23,7 @@
 <div class="login-box">
     @include('includes.alert')
     <div class="login-logo">
-        <a href="{{route('dashboard')}}"><b>SUST </b>ADDMISSION</a>
+        <a href="{{route('dashboard')}}"><b>SUST </b>ADMISSION</a>
     </div><!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
