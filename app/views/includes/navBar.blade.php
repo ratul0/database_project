@@ -38,7 +38,7 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Current Time: <span class="hidden-xs"><b>Sunday , 2015-03-01</b></span>
+                        Current Time: <span class="hidden-xs"><b>{{\Carbon\Carbon::now("Asia/Dhaka")->toDayDateTimeString()}}</b></span>
                     </a>
                 </li>
             </ul>
