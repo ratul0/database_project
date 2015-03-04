@@ -99,4 +99,60 @@ class AuthController extends \BaseController {
 
 	}
 
+	public function resetPassword(){
+		return View::make('auth.passwordReset')
+					->with('title', 'Password Reset');
+	}
+
+	public function doPasswordReset(){
+		$rules = [
+					'currentPassword'                  => 'required',
+					'password'              => 'required|confirmed',
+					'password_confirmation' => 'required'
+		];
+
+		$data = Input::all();
+
+		$validation = Validator::make($data,$rules);
+
+
+		if ($validation->fails())
+		{
+
+			return Redirect::route('passwordReset')
+						->withErrors($validation);
+		} else
+		{
+
+			$credentials = array
+			(
+						'email'    => Auth::user()->email,
+						'password' => $data['currentPassword']
+			);
+
+			if (Auth::validate($credentials))
+			{
+				$user = User::find(Auth::user()->id);
+				$user->password = Hash::make($data['password']);
+
+				if($user->save()){
+					Auth::logout();
+
+					return Redirect::route('login')
+								->with('success','Your password updated Successfully.');
+				}else{
+					return Redirect::route('passwordReset')
+								->with('error','Something went wrong.');
+				}
+
+			}
+			else
+			{
+				return Redirect::route('passwordReset')
+							->withErrors('Error in current Password.');
+			}
+		}
+
+	}
+
 }

@@ -33,6 +33,7 @@
             </li>
             <li class="header">Quick Links</li>
             <li><a href="#"><i class="fa fa-circle-o text-info"></i> View Site</a></li>
+            <li><a href="{{route('passwordReset')}}"><i class="fa fa-circle-o text-danger"></i>Change Password</a></li>
             <li><a href="{{route('logout')}}"><i class="fa fa-circle-o text-danger"></i>Logout</a></li>
 
         </ul>
