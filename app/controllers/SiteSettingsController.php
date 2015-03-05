@@ -10,11 +10,10 @@ class SiteSettingsController extends \BaseController {
 	 */
 	public function index()
 	{
-        $data = SiteSetting::find(1);
-        
+        $siteSettings = SiteSetting::all();
         return View::make('settings.siteSettings')
             ->with('title','Site Settings')
-            ->with('siteSettings',$data);
+            ->with('siteSettings',$siteSettings);
 	}
 
 	/**
