@@ -26,6 +26,9 @@ Route::group(['before'=>'auth'],function(){
 	/*DashboardController*/
 	Route::get('dashboard',['as'=> 'dashboard','uses'=>'DashboardController@home']);
 
+    /*SiteSettingsController*/
+    Route::get('settings',['as'=> 'settings','uses'=>'SiteSettingsController@index']);
+
 	Route::get('password-reset',['as'=> 'passwordReset','uses'=>'AuthController@resetPassword']);
 	Route::post('password-reset',['as'=> 'doPasswordReset','uses'=>'AuthController@doPasswordReset']);
 	/*DashboardController*/
