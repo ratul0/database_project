@@ -6,7 +6,6 @@
     {{ Form::open(array('route' => array('settings.update'), 'method' => 'put', 'class' => 'form-horizontal')) }}
         <fieldset>
 
-            <!-- Form Name -->
             <legend>Site Settings</legend>
 
             @include('includes.alert')
