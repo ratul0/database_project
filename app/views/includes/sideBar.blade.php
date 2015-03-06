@@ -11,7 +11,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{route('settings')}}"><i class="fa fa-circle-o"></i>Site Settings</a></li>
-                    <li><a href="../../index2.html"><i class="fa fa-circle-o"></i>Admin Settings</a></li>
+                    <li><a href="{{route('passwordReset')}}"><i class="fa fa-circle-o"></i>Admin Settings</a></li>
                 </ul>
             </li>
             <li class="treeview">
