@@ -28,6 +28,7 @@ Route::group(['before'=>'auth'],function(){
 
     /*SiteSettingsController*/
     Route::get('settings',['as'=> 'settings','uses'=>'SiteSettingsController@index']);
+    Route::put('settings',['as'=> 'settings.update','uses'=>'SiteSettingsController@update']);
 
 	Route::get('password-reset',['as'=> 'passwordReset','uses'=>'AuthController@resetPassword']);
 	Route::post('password-reset',['as'=> 'doPasswordReset','uses'=>'AuthController@doPasswordReset']);

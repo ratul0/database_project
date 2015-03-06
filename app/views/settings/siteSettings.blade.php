@@ -2,7 +2,8 @@
 
 @section('content')
 
-    <form class="form-horizontal">
+
+    {{ Form::open(array('route' => array('settings.update'), 'method' => 'put', 'class' => 'form-horizontal')) }}
         <fieldset>
 
             <!-- Form Name -->
@@ -58,15 +59,26 @@
                             <label class="col-md-2 control-label" for="website_online">Website Online:*</label>
 
                             <div class="col-md-4">
-                                <label class="radio-inline" for="website_online-0">
-                                    <input type="radio" name="website_online" id="website_online-0" value="Yes"
-                                           checked="checked">
-                                    Yes
-                                </label>
-                                <label class="radio-inline" for="website_online-1">
-                                    <input type="radio" name="website_online" id="website_online-1" value="No">
-                                    No
-                                </label>
+                                    @if($siteSetting->value == 'Yes')
+                                    <label class="radio-inline" for="website_online-0">
+                                        <input type="radio" name="website_online" id="website_online-0" value="Yes"
+                                               checked="checked">
+                                        Yes
+                                    </label>
+                                    <label class="radio-inline" for="website_online-1">
+                                        <input type="radio" name="website_online" id="website_online-1" value="No" >
+                                        No
+                                    </label>
+                                    @else
+                                            <label class="radio-inline" for="website_online-0">
+                                                <input type="radio" name="website_online" id="website_online-0" value="Yes">
+                                                Yes
+                                            </label>
+                                        <label class="radio-inline" for="website_online-1">
+                                        <input type="radio" name="website_online" id="website_online-1" value="No" checked="checked">
+                                         No
+                                          </label>
+                                     @endif
                             </div>
                         </div>
                         @endif
@@ -88,7 +100,7 @@
                             </div>
                         </div>
                         @endif
-                    @if($siteSetting->key == 'SITE_START_YEAR')
+                    @if($siteSetting->key == 'NOTICE')
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="global_notice">NOTICE:*</label>
 
@@ -110,6 +122,6 @@
 
 
         </fieldset>
-    </form>
+    {{ Form::close() }}
 
 @stop
