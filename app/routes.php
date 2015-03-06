@@ -30,7 +30,12 @@ Route::group(['before'=>'auth'],function(){
     Route::get('settings',['as'=> 'settings','uses'=>'SiteSettingsController@index']);
     Route::put('settings',['as'=> 'settings.update','uses'=>'SiteSettingsController@update']);
 
-	Route::get('password-reset',['as'=> 'passwordReset','uses'=>'AuthController@resetPassword']);
+	/*PageController*/
+    Route::get('pages',['as'=> 'pages','uses'=>'PageController@index']);
+
+
+
+    Route::get('password-reset',['as'=> 'passwordReset','uses'=>'AuthController@resetPassword']);
 	Route::post('password-reset',['as'=> 'doPasswordReset','uses'=>'AuthController@doPasswordReset']);
 	/*DashboardController*/
 
