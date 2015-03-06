@@ -33,6 +33,8 @@ Route::group(['before'=>'auth'],function(){
 	/*PageController*/
     Route::get('pages',['as'=> 'pages','uses'=>'PageController@index']);
     Route::get('pages/add',['as'=> 'pages.add','uses'=>'PageController@create']);
+    Route::post('pages/add',['as'=> 'pages.add.do','uses'=>'PageController@store']);
+    Route::get('pages/edit/{id}',['as'=> 'pages.edit','uses'=>'PageController@store']);
 
 
 
