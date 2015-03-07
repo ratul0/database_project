@@ -25,7 +25,7 @@
 
     {{ HTML::script('js/jquery.min.js') }}
     {{ HTML::script('js/ckeditor/ckeditor.js') }}
-    {{ HTML::script('js/jquery.sortable.min.js') }}
+    {{ HTML::script('js/jquery.nestable.js') }}
 
     @yield('script')
 
