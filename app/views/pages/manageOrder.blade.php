@@ -12,10 +12,13 @@
 
         <div class="dd" id="published">
             <ol class="dd-list list-group">
-                <li class="dd-item list-group-item list-group-item-success" >
+                <li class="dd-item list-group-item list-group-item-success" value="1">
                     <div class="dd-handle">Home Page</div>
                 </li>
-                <li class="dd-item list-group-item list-group-item-success" >
+                <li class="dd-item list-group-item list-group-item-success" value="2" >
+                    <div class="dd-handle">Admission</div>
+                </li>
+                <li class="dd-item list-group-item list-group-item-success" value="3" >
                     <div class="dd-handle">Contact</div>
                 </li>
             </ol>
@@ -29,7 +32,7 @@
             var menulist = [];
             for(var i=0; i < $lis.length; i++)
             {
-                var str = $('ol li:eq(' + i + ')').text();
+                var str = $('ol li:eq(' + i + ')').attr('value');
                 var trim = str.replace(/^\s+|\s+$/g, '');
                 menulist[i] = trim;
             }
