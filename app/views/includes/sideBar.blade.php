@@ -21,7 +21,7 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i>Manage Page Order</a></li>
+                    <li><a href="{{route('pages.manageOrder')}}"><i class="fa fa-circle-o"></i>Manage Page Order</a></li>
                     <li><a href="{{route('pages')}}"><i class="fa fa-circle-o"></i>See All Pages</a></li>
                     <li><a href="{{route('pages.add')}}"><i class="fa fa-circle-o"></i>Add New Page</a></li>
                 </ul>

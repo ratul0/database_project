@@ -159,4 +159,8 @@ class PageController extends \BaseController {
 		//
 	}
 
+    public function manageOrder(){
+        return View::make('pages.manageOrder');
+    }
+
 }
