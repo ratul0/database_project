@@ -25,7 +25,7 @@
         <div class="form-group">
             <label class="col-md-2 control-label" for="sitename">Page Content:*</label>
             <div class="col-md-10">
-                <textarea class="ckeditor" id="content" name="content" ></textarea>
+                <textarea  id="content" name="content" ></textarea>
             </div>
         </div>
 
@@ -40,6 +40,11 @@
 
     </fieldset>
     {{ Form::close() }}
+	<script>
+			CKEDITOR.replace( 'content', {
+			 //filebrowserUploadUrl: "http://localhost/sust/database_project/public/js/ckeditor/custom/file.php"
+			} );
+	</script>
 
 
 @stop
