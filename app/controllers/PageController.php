@@ -156,7 +156,9 @@ class PageController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		Page::destroy($id);
+
+		return Redirect::route('pages');
 	}
 
     public function manageOrder(){

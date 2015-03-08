@@ -35,6 +35,7 @@ Route::group(['before'=>'auth'],function(){
     Route::get('pages/add',['as'=> 'pages.add','uses'=>'PageController@create']);
     Route::post('pages/add',['as'=> 'pages.add.do','uses'=>'PageController@store']);
     Route::get('pages/edit/{id}',['as'=> 'pages.edit','uses'=>'PageController@edit']);
+    Route::delete('pages/{id}',['as'=> 'pages.destroy','uses'=>'PageController@destroy']);
     Route::put('pages/edit/{id}',['as'=> 'pages.edit.do','uses'=>'PageController@update']);
     Route::get('pages/manageOrder',['as'=> 'pages.manageOrder','uses'=>'PageController@manageOrder']);
 
