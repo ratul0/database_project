@@ -1,5 +1,5 @@
 <header class="main-header">
-    <a href="../../index2.html" class="logo"><b>Admin Panel</b></a>
+    <a href="{{route('settings')}}" class="logo"><b>Admin Panel</b></a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->
