@@ -162,7 +162,9 @@ class PageController extends \BaseController {
 	}
 
     public function manageOrder(){
-        return View::make('pages.manageOrder');
+        $page = Page::all();
+        return View::make('pages.manageOrder')
+            ->with('pages',$page);
     }
 
 }

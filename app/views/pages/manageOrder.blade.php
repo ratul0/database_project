@@ -12,15 +12,11 @@
 
         <div class="dd" id="published">
             <ol class="dd-list list-group">
-                <li class="dd-item list-group-item list-group-item-success" value="1">
-                    <div class="dd-handle">Home Page</div>
-                </li>
-                <li class="dd-item list-group-item list-group-item-success" value="2" >
-                    <div class="dd-handle">Admission</div>
-                </li>
-                <li class="dd-item list-group-item list-group-item-success" value="3" >
-                    <div class="dd-handle">Contact</div>
-                </li>
+                    @foreach($pages as $page)
+                    <li class="dd-item list-group-item list-group-item-success" value="{{$page->id}}">
+                        <div class="dd-handle">{{$page->title}}</div>
+                    </li>
+                    @endforeach
             </ol>
         </div>
     </div>
